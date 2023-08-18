@@ -11,7 +11,7 @@ module.exports = function toReadable (number) {
       } else if (n < 100) {
           return tens[Math.floor(n / 10)] + (n % 10 > 0 ? " " + ones[n % 10] : "");
       } else {
-          return ones[Math.floor(n / 100)] + " hundred" + (n % 100 > 0 ? " and " + wordsForLessThanThousand(n % 100) : "");
+          return ones[Math.floor(n / 100)] + " hundred" + (n % 100 > 0 ? + wordsForLessThanThousand(n % 100) : "");
       }
   }
   
